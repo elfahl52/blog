@@ -1,0 +1,88 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Laravel Blog Project Architecture</title>
+  <desc id="desc">A simple architecture diagram showing users, routes, controllers, models, database, and dashboard pages.</desc>
+  <defs>
+    <style>
+      .bg { fill: #f8f9fb; }
+      .title { font: 700 28px 'Segoe UI', Arial, sans-serif; fill: #1f2937; }
+      .sub { font: 600 18px 'Segoe UI', Arial, sans-serif; fill: #374151; }
+      .label { font: 600 16px 'Segoe UI', Arial, sans-serif; fill: #111827; }
+      .small { font: 500 14px 'Segoe UI', Arial, sans-serif; fill: #374151; }
+      .box { fill: #ffffff; stroke: #d1d5db; stroke-width: 2; rx: 16; }
+      .accent { fill: #e0f2fe; stroke: #7dd3fc; stroke-width: 2; rx: 16; }
+      .green { fill: #ecfdf5; stroke: #6ee7b7; stroke-width: 2; rx: 16; }
+      .purple { fill: #f3e8ff; stroke: #c4b5fd; stroke-width: 2; rx: 16; }
+      .db { fill: #fef3c7; stroke: #f59e0b; stroke-width: 2; rx: 16; }
+      .arrow { stroke: #4b5563; stroke-width: 2.5; fill: none; marker-end: url(#arrow); }
+      .arrow-soft { stroke: #7c3aed; stroke-width: 2.2; fill: none; marker-end: url(#arrowSoft); }
+    </style>
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowSoft" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#7c3aed"/>
+    </marker>
+  </defs>
+
+  <rect class="bg" width="1200" height="720"/>
+  <text x="600" y="50" text-anchor="middle" class="title">Laravel Blog Project</text>
+
+  <rect x="60" y="110" width="170" height="90" class="box"/>
+  <text x="145" y="155" text-anchor="middle" class="label">User</text>
+  <text x="145" y="180" text-anchor="middle" class="small">Visitor / Reader</text>
+
+  <rect x="320" y="110" width="180" height="90" class="accent"/>
+  <text x="410" y="155" text-anchor="middle" class="label">Browser</text>
+  <text x="410" y="180" text-anchor="middle" class="small">Home / Post / Login</text>
+
+  <rect x="590" y="110" width="220" height="110" class="green"/>
+  <text x="700" y="150" text-anchor="middle" class="label">Routes</text>
+  <text x="700" y="175" text-anchor="middle" class="small">/posts, /login, /dashboard</text>
+  <text x="700" y="198" text-anchor="middle" class="small">web.php</text>
+
+  <rect x="900" y="110" width="220" height="110" class="purple"/>
+  <text x="1010" y="150" text-anchor="middle" class="label">Controllers</text>
+  <text x="1010" y="175" text-anchor="middle" class="small">PostController</text>
+  <text x="1010" y="198" text-anchor="middle" class="small">AuthController</text>
+
+  <path d="M230 155 H320" class="arrow"/>
+  <path d="M500 155 H590" class="arrow"/>
+  <path d="M810 155 H900" class="arrow"/>
+
+  <rect x="325" y="310" width="220" height="150" class="box"/>
+  <text x="435" y="345" text-anchor="middle" class="label">Models</text>
+  <text x="435" y="375" text-anchor="middle" class="small">Post</text>
+  <text x="435" y="398" text-anchor="middle" class="small">Category</text>
+  <text x="435" y="421" text-anchor="middle" class="small">Tag</text>
+  <text x="435" y="444" text-anchor="middle" class="small">Comment / User</text>
+
+  <rect x="610" y="310" width="240" height="150" class="db"/>
+  <text x="730" y="345" text-anchor="middle" class="label">Database</text>
+  <text x="730" y="375" text-anchor="middle" class="small">posts</text>
+  <text x="730" y="398" text-anchor="middle" class="small">categories</text>
+  <text x="730" y="421" text-anchor="middle" class="small">tags</text>
+  <text x="730" y="444" text-anchor="middle" class="small">comments / users</text>
+
+  <rect x="190" y="540" width="260" height="120" class="accent"/>
+  <text x="320" y="575" text-anchor="middle" class="label">Public Views</text>
+  <text x="320" y="602" text-anchor="middle" class="small">posts.index</text>
+  <text x="320" y="625" text-anchor="middle" class="small">posts.show</text>
+
+  <rect x="490" y="540" width="300" height="120" class="green"/>
+  <text x="640" y="575" text-anchor="middle" class="label">Auth Views</text>
+  <text x="640" y="602" text-anchor="middle" class="small">login / register</text>
+  <text x="640" y="625" text-anchor="middle" class="small">logout flow</text>
+
+  <rect x="840" y="540" width="300" height="120" class="purple"/>
+  <text x="990" y="575" text-anchor="middle" class="label">Dashboard</text>
+  <text x="990" y="602" text-anchor="middle" class="small">posts / categories / tags</text>
+  <text x="990" y="625" text-anchor="middle" class="small">Author + Admin</text>
+
+  <path d="M435 260 L435 310" class="arrow-soft"/>
+  <path d="M730 220 L730 310" class="arrow-soft"/>
+  <path d="M435 460 L320 540" class="arrow-soft"/>
+  <path d="M435 460 L640 540" class="arrow-soft"/>
+  <path d="M730 460 L990 540" class="arrow-soft"/>
+
+  <text x="600" y="690" text-anchor="middle" class="sub">Reader experience + author dashboard + admin management</text>
+</svg>
